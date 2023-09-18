@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dataCNMH" targetNamespace="http://tempuri.org/dataCNMH.xsd" xmlns:mstns="http://tempuri.org/dataCNMH.xsd" xmlns="http://tempuri.org/dataCNMH.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLHocSinhTHPTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLHocSinhTHPTConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DoAn_Spader.Properties.Settings.GlobalReference.Default.QLHocSinhTHPTConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KQ_CA_NAM_MON_HOCTableAdapter" GeneratorDataComponentClassName="KQ_CA_NAM_MON_HOCTableAdapter" Name="KQ_CA_NAM_MON_HOC" UserDataComponentName="KQ_CA_NAM_MON_HOCTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLHocSinhTHPTConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT	HS.HoTen,
+		L.TenLop,
+		MH.TenMonHoc,
+		HK.TenHocKy,
+		NH.TenNamHoc,
+		DiemThiLai,
+		DTBCaNam
+FROM	dbo.KQ_CA_NAM_MON_HOC KQ,
+		dbo.HOCSINH HS,
+		dbo.LOP L,
+		dbo.MONHOC MH,
+		dbo.HOCKY HK,
+		dbo.NAMHOC NH
+WHERE	KQ.MaHocSinh = HS.MaHocSinh AND
+		KQ.MaLop = L.MaLop AND
+		KQ.MaMonHoc = MH.MaMonHoc AND
+		KQ.MaNamHoc = NH.MaNamHoc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DiemThiLai" DataSetColumn="DiemThiLai" />
+              <Mapping SourceColumn="DTBCaNam" DataSetColumn="DTBCaNam" />
+              <Mapping SourceColumn="HoTen" DataSetColumn="HoTen" />
+              <Mapping SourceColumn="TenLop" DataSetColumn="TenLop" />
+              <Mapping SourceColumn="TenMonHoc" DataSetColumn="TenMonHoc" />
+              <Mapping SourceColumn="TenHocKy" DataSetColumn="TenHocKy" />
+              <Mapping SourceColumn="TenNamHoc" DataSetColumn="TenNamHoc" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dataCNMH" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dataCNMH" msprop:Generator_UserDSName="dataCNMH">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="KQ_CA_NAM_MON_HOC" msprop:Generator_TableClassName="KQ_CA_NAM_MON_HOCDataTable" msprop:Generator_TableVarName="tableKQ_CA_NAM_MON_HOC" msprop:Generator_TablePropName="KQ_CA_NAM_MON_HOC" msprop:Generator_RowDeletingName="KQ_CA_NAM_MON_HOCRowDeleting" msprop:Generator_RowChangingName="KQ_CA_NAM_MON_HOCRowChanging" msprop:Generator_RowEvHandlerName="KQ_CA_NAM_MON_HOCRowChangeEventHandler" msprop:Generator_RowDeletedName="KQ_CA_NAM_MON_HOCRowDeleted" msprop:Generator_UserTableName="KQ_CA_NAM_MON_HOC" msprop:Generator_RowChangedName="KQ_CA_NAM_MON_HOCRowChanged" msprop:Generator_RowEvArgName="KQ_CA_NAM_MON_HOCRowChangeEvent" msprop:Generator_RowClassName="KQ_CA_NAM_MON_HOCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DiemThiLai" msprop:Generator_ColumnVarNameInTable="columnDiemThiLai" msprop:Generator_ColumnPropNameInRow="DiemThiLai" msprop:Generator_ColumnPropNameInTable="DiemThiLaiColumn" msprop:Generator_UserColumnName="DiemThiLai" type="xs:double" minOccurs="0" />
+              <xs:element name="DTBCaNam" msprop:Generator_ColumnVarNameInTable="columnDTBCaNam" msprop:Generator_ColumnPropNameInRow="DTBCaNam" msprop:Generator_ColumnPropNameInTable="DTBCaNamColumn" msprop:Generator_UserColumnName="DTBCaNam" type="xs:double" />
+              <xs:element name="HoTen" msprop:Generator_ColumnVarNameInTable="columnHoTen" msprop:Generator_ColumnPropNameInRow="HoTen" msprop:Generator_ColumnPropNameInTable="HoTenColumn" msprop:Generator_UserColumnName="HoTen">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenLop" msprop:Generator_ColumnVarNameInTable="columnTenLop" msprop:Generator_ColumnPropNameInRow="TenLop" msprop:Generator_ColumnPropNameInTable="TenLopColumn" msprop:Generator_UserColumnName="TenLop">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenMonHoc" msprop:Generator_ColumnVarNameInTable="columnTenMonHoc" msprop:Generator_ColumnPropNameInRow="TenMonHoc" msprop:Generator_ColumnPropNameInTable="TenMonHocColumn" msprop:Generator_UserColumnName="TenMonHoc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenHocKy" msprop:Generator_ColumnVarNameInTable="columnTenHocKy" msprop:Generator_ColumnPropNameInRow="TenHocKy" msprop:Generator_ColumnPropNameInTable="TenHocKyColumn" msprop:Generator_UserColumnName="TenHocKy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenNamHoc" msprop:Generator_ColumnVarNameInTable="columnTenNamHoc" msprop:Generator_ColumnPropNameInRow="TenNamHoc" msprop:Generator_ColumnPropNameInTable="TenNamHocColumn" msprop:Generator_UserColumnName="TenNamHoc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

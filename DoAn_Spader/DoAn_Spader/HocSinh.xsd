@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HocSinh" targetNamespace="http://tempuri.org/HocSinh.xsd" xmlns:mstns="http://tempuri.org/HocSinh.xsd" xmlns="http://tempuri.org/HocSinh.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLHocSinhTHPTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLHocSinhTHPTConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DoAn_Spader.Properties.Settings.GlobalReference.Default.QLHocSinhTHPTConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HOCSINHTableAdapter" GeneratorDataComponentClassName="HOCSINHTableAdapter" Name="HOCSINH" UserDataComponentName="HOCSINHTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLHocSinhTHPTConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT HS.MaHocSinh,HS.HoTen,HS.GioiTinh,HS.NgaySinh,HS.NoiSinh,DT.TenDanToc,TG.TenTonGiao,HS.HoTenCha,C.TenNghe AS [NgheCha],HS.HoTenMe,M.TenNghe AS [NgheMe] FROM dbo.HOCSINH HS,dbo.DANTOC DT,dbo.TONGIAO TG,(SELECT HS.MaHocSinh,NN.TenNghe FROM dbo.HOCSINH HS,dbo.NGHENGHIEP NN WHERE HS.MaNNghiepCha = NN.MaNghe) C,(SELECT HS.MaHocSinh,NN.TenNghe FROM dbo.HOCSINH HS,dbo.NGHENGHIEP NN WHERE HS.MaNNghiepMe = NN.MaNghe) M WHERE HS.MaDanToc = DT.MaDanToc AND HS.MaTonGiao = TG.MaTonGiao AND HS.MaHocSinh = C.MaHocSinh AND HS.MaHocSinh = M.MaHocSinh</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaHocSinh" DataSetColumn="MaHocSinh" />
+              <Mapping SourceColumn="HoTen" DataSetColumn="HoTen" />
+              <Mapping SourceColumn="GioiTinh" DataSetColumn="GioiTinh" />
+              <Mapping SourceColumn="NgaySinh" DataSetColumn="NgaySinh" />
+              <Mapping SourceColumn="NoiSinh" DataSetColumn="NoiSinh" />
+              <Mapping SourceColumn="HoTenCha" DataSetColumn="HoTenCha" />
+              <Mapping SourceColumn="HoTenMe" DataSetColumn="HoTenMe" />
+              <Mapping SourceColumn="TenDanToc" DataSetColumn="TenDanToc" />
+              <Mapping SourceColumn="TenTonGiao" DataSetColumn="TenTonGiao" />
+              <Mapping SourceColumn="NgheCha" DataSetColumn="NgheCha" />
+              <Mapping SourceColumn="NgheMe" DataSetColumn="NgheMe" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HocSinh" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HocSinh" msprop:Generator_UserDSName="HocSinh">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HOCSINH" msprop:Generator_TableClassName="HOCSINHDataTable" msprop:Generator_TableVarName="tableHOCSINH" msprop:Generator_RowChangedName="HOCSINHRowChanged" msprop:Generator_TablePropName="HOCSINH" msprop:Generator_RowDeletingName="HOCSINHRowDeleting" msprop:Generator_RowChangingName="HOCSINHRowChanging" msprop:Generator_RowEvHandlerName="HOCSINHRowChangeEventHandler" msprop:Generator_RowDeletedName="HOCSINHRowDeleted" msprop:Generator_RowClassName="HOCSINHRow" msprop:Generator_UserTableName="HOCSINH" msprop:Generator_RowEvArgName="HOCSINHRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaHocSinh" msprop:Generator_ColumnVarNameInTable="columnMaHocSinh" msprop:Generator_ColumnPropNameInRow="MaHocSinh" msprop:Generator_ColumnPropNameInTable="MaHocSinhColumn" msprop:Generator_UserColumnName="MaHocSinh">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HoTen" msprop:Generator_ColumnVarNameInTable="columnHoTen" msprop:Generator_ColumnPropNameInRow="HoTen" msprop:Generator_ColumnPropNameInTable="HoTenColumn" msprop:Generator_UserColumnName="HoTen">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GioiTinh" msprop:Generator_ColumnVarNameInTable="columnGioiTinh" msprop:Generator_ColumnPropNameInRow="GioiTinh" msprop:Generator_ColumnPropNameInTable="GioiTinhColumn" msprop:Generator_UserColumnName="GioiTinh" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NgaySinh" msprop:Generator_ColumnVarNameInTable="columnNgaySinh" msprop:Generator_ColumnPropNameInRow="NgaySinh" msprop:Generator_ColumnPropNameInTable="NgaySinhColumn" msprop:Generator_UserColumnName="NgaySinh" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NoiSinh" msprop:Generator_ColumnVarNameInTable="columnNoiSinh" msprop:Generator_ColumnPropNameInRow="NoiSinh" msprop:Generator_ColumnPropNameInTable="NoiSinhColumn" msprop:Generator_UserColumnName="NoiSinh">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HoTenCha" msprop:Generator_ColumnVarNameInTable="columnHoTenCha" msprop:Generator_ColumnPropNameInRow="HoTenCha" msprop:Generator_ColumnPropNameInTable="HoTenChaColumn" msprop:Generator_UserColumnName="HoTenCha">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HoTenMe" msprop:Generator_ColumnVarNameInTable="columnHoTenMe" msprop:Generator_ColumnPropNameInRow="HoTenMe" msprop:Generator_ColumnPropNameInTable="HoTenMeColumn" msprop:Generator_UserColumnName="HoTenMe">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenDanToc" msprop:Generator_ColumnVarNameInTable="columnTenDanToc" msprop:Generator_ColumnPropNameInRow="TenDanToc" msprop:Generator_ColumnPropNameInTable="TenDanTocColumn" msprop:Generator_UserColumnName="TenDanToc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenTonGiao" msprop:Generator_ColumnVarNameInTable="columnTenTonGiao" msprop:Generator_ColumnPropNameInRow="TenTonGiao" msprop:Generator_ColumnPropNameInTable="TenTonGiaoColumn" msprop:Generator_UserColumnName="TenTonGiao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NgheCha" msprop:Generator_ColumnVarNameInTable="columnNgheCha" msprop:Generator_ColumnPropNameInRow="NgheCha" msprop:Generator_ColumnPropNameInTable="NgheChaColumn" msprop:Generator_UserColumnName="NgheCha">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NgheMe" msprop:Generator_ColumnVarNameInTable="columnNgheMe" msprop:Generator_ColumnPropNameInRow="NgheMe" msprop:Generator_ColumnPropNameInTable="NgheMeColumn" msprop:Generator_UserColumnName="NgheMe">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:HOCSINH" />
+      <xs:field xpath="mstns:MaHocSinh" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

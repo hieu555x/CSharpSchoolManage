@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dataLopHoc" targetNamespace="http://tempuri.org/dataLopHoc.xsd" xmlns:mstns="http://tempuri.org/dataLopHoc.xsd" xmlns="http://tempuri.org/dataLopHoc.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLHocSinhTHPTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLHocSinhTHPTConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DoAn_Spader.Properties.Settings.GlobalReference.Default.QLHocSinhTHPTConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LOPTableAdapter" GeneratorDataComponentClassName="LOPTableAdapter" Name="LOP" UserDataComponentName="LOPTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLHocSinhTHPTConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT L.MaLop,L.TenLop,KL.TenKhoiLop,NH.TenNamHoc,L.SiSo,GV.TenGiaoVien FROM dbo.LOP L,dbo.KHOILOP KL,dbo.NAMHOC NH,dbo.GIAOVIEN GV WHERE L.MaKhoiLop = KL.MaKhoiLop AND L.MaNamHoc = NH.MaNamHoc AND L.MaGiaoVien = GV.MaGiaoVien</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaLop" DataSetColumn="MaLop" />
+              <Mapping SourceColumn="TenLop" DataSetColumn="TenLop" />
+              <Mapping SourceColumn="SiSo" DataSetColumn="SiSo" />
+              <Mapping SourceColumn="TenKhoiLop" DataSetColumn="TenKhoiLop" />
+              <Mapping SourceColumn="TenNamHoc" DataSetColumn="TenNamHoc" />
+              <Mapping SourceColumn="TenGiaoVien" DataSetColumn="TenGiaoVien" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dataLopHoc" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dataLopHoc" msprop:Generator_UserDSName="dataLopHoc">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LOP" msprop:Generator_TableClassName="LOPDataTable" msprop:Generator_TableVarName="tableLOP" msprop:Generator_TablePropName="LOP" msprop:Generator_RowDeletingName="LOPRowDeleting" msprop:Generator_RowChangingName="LOPRowChanging" msprop:Generator_RowEvHandlerName="LOPRowChangeEventHandler" msprop:Generator_RowDeletedName="LOPRowDeleted" msprop:Generator_UserTableName="LOP" msprop:Generator_RowChangedName="LOPRowChanged" msprop:Generator_RowEvArgName="LOPRowChangeEvent" msprop:Generator_RowClassName="LOPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaLop" msprop:Generator_ColumnVarNameInTable="columnMaLop" msprop:Generator_ColumnPropNameInRow="MaLop" msprop:Generator_ColumnPropNameInTable="MaLopColumn" msprop:Generator_UserColumnName="MaLop">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenLop" msprop:Generator_ColumnVarNameInTable="columnTenLop" msprop:Generator_ColumnPropNameInRow="TenLop" msprop:Generator_ColumnPropNameInTable="TenLopColumn" msprop:Generator_UserColumnName="TenLop">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SiSo" msprop:Generator_ColumnVarNameInTable="columnSiSo" msprop:Generator_ColumnPropNameInRow="SiSo" msprop:Generator_ColumnPropNameInTable="SiSoColumn" msprop:Generator_UserColumnName="SiSo" type="xs:int" />
+              <xs:element name="TenKhoiLop" msprop:Generator_ColumnVarNameInTable="columnTenKhoiLop" msprop:Generator_ColumnPropNameInRow="TenKhoiLop" msprop:Generator_ColumnPropNameInTable="TenKhoiLopColumn" msprop:Generator_UserColumnName="TenKhoiLop">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenNamHoc" msprop:Generator_ColumnVarNameInTable="columnTenNamHoc" msprop:Generator_ColumnPropNameInRow="TenNamHoc" msprop:Generator_ColumnPropNameInTable="TenNamHocColumn" msprop:Generator_UserColumnName="TenNamHoc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenGiaoVien" msprop:Generator_ColumnVarNameInTable="columnTenGiaoVien" msprop:Generator_ColumnPropNameInRow="TenGiaoVien" msprop:Generator_ColumnPropNameInTable="TenGiaoVienColumn" msprop:Generator_UserColumnName="TenGiaoVien">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LOP" />
+      <xs:field xpath="mstns:MaLop" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
